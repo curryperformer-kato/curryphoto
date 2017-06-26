@@ -48,3 +48,4 @@ gem 'devise'
 gem 'honoka-rails', '>= 3.3.6.3'
 gem 'rails_12factor', group: :production
 gem 'rails_admin'
+gem 'cancan'
