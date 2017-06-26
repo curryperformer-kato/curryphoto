@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Curry Photo</title>
+</head>
+<body>
+<p class="flash"><%= notice %><%= alert %></p>
+<header>
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/" class="navbar-brand">Curry Photo</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+          <li class="active"><%= link_to "Top", root_path %></li>
+        　<li><%= link_to "写真投稿", pictures_path %></li>
+　　　　　<% if user_signed_in? %>
+　　　　　　<li><%= link_to 'マイページ', edit_user_registration_path %></li>
+  　　　　　　　　<li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+　　　　　<% else %>
+  　　　　　　<li><%= link_to 'ログイン', new_user_session_path  %></li>
+　　　　　  <li><%= link_to 'サインアップ', new_user_registration_path %></li>
+　　　　　<% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="jumbotron special">
+  <div class="honoka"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 outline">
+        <h1>Curry Photo</h1>
+        <p>Curryの写真で飯テロを起こすサイト</p>
+        <div class="download">
+          <a href="/bootstrap-ja.html" class="btn btn-primary btn-lg"><i class="fa fa-play"></i>写真を投稿する</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
