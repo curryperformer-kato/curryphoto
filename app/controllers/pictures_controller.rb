@@ -16,7 +16,7 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.new(pictures_params)
-    @blog.user_id = current_user.id
+    @picture.user_id = current_user.id
     if @picture.save
       redirect_to pictures_path, notice: "写真を投稿しました！"
       NoticeMailer.sendmail_blog(@picture).deliver
@@ -30,12 +30,11 @@ class PicturesController < ApplicationController
 
   def update
     @picture.update(pictures_params)
-    redirect_to pictures_path, notice: "写真を更新しました！"
-  end
-
-  def confirm
-    @picture = Picture.new(pictures_params)
-    render :new if @picture.invalid?
+    if @picture.save
+      redirect_to pictures_path, notice: "更新しました"
+    else
+      render :edit
+    end
   end
 
   def destroy
