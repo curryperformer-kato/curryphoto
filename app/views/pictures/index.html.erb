@@ -11,8 +11,8 @@
       <p>写真:<%= image_tag(picture.image_url) %></p>
       <p>タイトル:<%= picture.title %></p>
       <p>本文:<%= picture.content %></p>
-      <%= link_to "編集", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
-      <%= link_to '削除', picture_path(picture.id), data: { confirm: '本当に削除していいですか？' }, method: :delete, class: 'btn btn-default btn-sm btn btn-danger' %>
+      <%= link_to "編集する", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>
+      <%= link_to '削除する', picture_path(picture.id), data: { confirm: '本当に削除していいですか？' }, method: :delete, class: 'btn btn-default btn-sm btn btn-danger' %>
     <% end %>
 
   </div>
