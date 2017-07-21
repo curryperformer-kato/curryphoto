@@ -33,7 +33,7 @@ class PicturesController < ApplicationController
     if @picture.save
       redirect_to pictures_path, notice: "更新しました"
     else
-      render :edit
+      render 'edit'
     end
   end
 
@@ -44,7 +44,7 @@ class PicturesController < ApplicationController
 
   private
     def pictures_params
-      params.require(:picture).permit(:title, :content)
+      params.require(:picture).permit(:title, :content, :image, :image_cache)
     end
     
     def set_picture
