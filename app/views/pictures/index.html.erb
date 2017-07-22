@@ -7,8 +7,8 @@
     <h1>ブログ一覧</h1>
 
     <% @pictures.each do |picture| %>
+      <p><%= image_tag(picture.image_url) %></p>
       <p>ユーザー名:<%= picture.user.name %></p>
-      <p>写真:<%= image_tag(picture.image_url) %></p>
       <p>タイトル:<%= picture.title %></p>
       <p>本文:<%= picture.content %></p>
       <%= link_to "編集する", edit_picture_path(picture.id), class: 'btn btn-default btn-sm btn-success' %>

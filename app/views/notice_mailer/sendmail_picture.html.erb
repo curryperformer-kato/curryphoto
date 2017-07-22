@@ -1,7 +1,9 @@
 <h1>Curry Photoに新しく写真が投稿されました！</h1>
 
-<h4>title: <%= @picture.title %></h4>
-<p>content: <%= @picture.content %></p>
+<p><%= image_tag(@picture.image_url) %></p>
+<p>ユーザー名:<%= @picture.user.name %></p>
+<p>タイトル:<%= @picture.title %></p>
+<p>本文:<%= @picture.content %></p>
 
 <p>
   <%= link_to '投稿された写真はこちら', pictures_url %>
