@@ -15,6 +15,8 @@
       <%= link_to '削除する', picture_path(picture.id), data: { confirm: '本当に削除していいですか？' }, method: :delete, class: 'btn btn-default btn-sm btn btn-danger' %>
     <% end %>
 
+      <%= link_to "投稿する", new_picture_path, class: 'btn btn-default btn-sm' %>
+
   </div>
  </div>
 </div>
