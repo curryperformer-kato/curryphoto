@@ -42,6 +42,11 @@ class PicturesController < ApplicationController
     redirect_to pictures_path, notice: "写真を削除しました！"
   end
 
+  def confirm
+    @picture = Picture.new(pictures_params)
+    render :new if @picture.invalid?
+  end
+
   private
     def pictures_params
       params.require(:picture).permit(:title, :content, :image, :image_cache)
