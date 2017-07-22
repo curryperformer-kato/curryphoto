@@ -2377,6 +2377,12 @@ body {
   padding-top: 90px;
 }
 
+.post-image{
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
 input,
 button,
 select,
