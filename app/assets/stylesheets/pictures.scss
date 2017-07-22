@@ -2,8 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user-name{
+  margin-top: 10px;
+}
+
 .post-image{
   width: 150px;
   height: 150px;
   margin: 0 auto;
 }
+
+footer {
+    width: 100%;
+    background-color: #F9F9F9;
+    color: white;
+    margin: auto;
+    padding: 10px,0;
+    font-size: 12px;
+    position: absolute;
+    bottom: 0;
+  }
