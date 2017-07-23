@@ -12,7 +12,7 @@
 <% end %>
 
 <%= form_for(@picture, url: new_picture_path, method: 'get') do |f| %>
-  <%= f.hidden_field :image_url_cache %>
+  <%= f.hidden_field :image_url %>
   <%= f.hidden_field :title %>
   <%= f.hidden_field :content %>
   <%= f.submit "戻る", name: 'back' %>
