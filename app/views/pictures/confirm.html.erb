@@ -5,7 +5,7 @@
   <%= f.hidden_field :title %>
   <%= f.hidden_field :content %>
 
-  <p class="post-image">写真:<%= image_tag(@picture.image_url_cache) %></p>
+  <p class="post-image">写真:<%= image_tag(@picture.image_cache) %></p>
   <p>タイトル:<%= @picture.title %></p>
   <p>本文:<%= @picture.content %></p>
   <%= f.submit "投稿する" %>
