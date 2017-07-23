@@ -7,7 +7,7 @@
     <h1>写真一覧</h1>
 
     <% @pictures.each do |picture| %>
-      <p><p class="post-image"><%= image_tag(picture.image_url_cache) %></p>
+      <p><p class="post-image"><%= image_tag(picture.image_cache) %></p>
       <p>ユーザー名:<%= picture.user.name %></p>
       <p>タイトル:<%= picture.title %></p>
       <p>本文:<%= picture.content %></p>
