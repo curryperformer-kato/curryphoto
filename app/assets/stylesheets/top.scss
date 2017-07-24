@@ -60,12 +60,18 @@
   position: relative; width: 100%; height: auto !important; height: 100%; min-height: 100%;
   }
 
+body {
+  margin-bottom: 60px;
+  }
+
 footer {
     width: 100%;
     background-color: #FFA500;
     height: 60px;
     color: white;
+    padding: 20px 0 10px 0;
     margin: auto;
+    padding-bottom: 10px;
     font-size: 16px;
     font-weight: bold;
     position: absolute;
