@@ -56,15 +56,18 @@
   }
 }
 
+.container {
+  position: relative; width: 100%; height: auto !important; height: 100%; min-height: 100%;
+  }
+
 footer {
     width: 100%;
     background-color: #FFA500;
-    padding: 20px 0 10px 0;
+    height: 60px;
     color: white;
     margin: auto;
-    padding-bottom: 10px;
     font-size: 16px;
     font-weight: bold;
-    position: absolute!important;
+    position: absolute;
     bottom: 0;
   }
